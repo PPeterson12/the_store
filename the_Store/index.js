@@ -24,11 +24,19 @@ const getItemPrices = (arr) => {
   });
   return prices;
 };
+
+const findItemById = (arr) => {
+  const ids = [];
+  arr.((item) => {
+    ids.push(item.id);
+  });
+  return ids;
+};
 //write the following functions and test them
 
 console.log(getItemNames(items)); //returns an array of the names of the items
 console.log(getItemPrices(items)); //returns an array of prices
-//console.log(findItemById(2, items));//returns an item by it's id
+console.log(findItemById(2, items)); //returns an item by it's id
 //console.log(mostExpensiveItem(items));//returns the most expensive item
 //console.log(leastExpensiveItem(items));//returns the least expensive item
 //console.log(calculateInventory(items));//returns the total value of the inventory
